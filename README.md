@@ -2,6 +2,33 @@
 
 一个简单易用的漂亮权限申请库
 
+注意：：：：：：：：：：：：：：：：：：：：：：：：：：：：：
+注意：：：：：：：：：：：：：：：：：：：：：：：：：：：：：
+注意：：：：：：：：：：：：：：：：：：：：：：：：：：：：：
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        google()
+    }
+}
+注意：：：：：：：：：：：：：：：：：：：：：：：：：：：：：
+注意：：：：：：：：：：：：：：：：：：：：：：：：：：：：：
+注意：：：：：：：：：：：：：：：：：：：：：：：：：：：：：
+
 # 概述
 随着Android6.0的普及,权限申请也变成了我们开发中必写的一段代码。比如sd卡权限、定位权限、拍照权限，这些几乎都是每个app必备的。而一般情况下我们都会在需要权限之前申请，然后各种判断。那既然是一些必备的是权限，我们为何不在我们一次打开app的时候就把这个全部都申请了呢？可是一下申请那么多权限对用户来说显然不是很友好，所以我们不妨在申请权限之前告诉一下用户，好让用户有个心理准备。于是借鉴了饿了么的权限申请界面，封装了一个库
 
@@ -17,7 +44,7 @@
 
 Gradle:
 
-	compile 'me.weyye.hipermission:library:1.0.7'
+	compile 'com.github.supertaohaili:Permission:1.0.1'
 
 Or Maven:
 
